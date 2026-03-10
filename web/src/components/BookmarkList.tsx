@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { getBookmarks, Bookmark } from '@/src/lib/api';
+import { getBookmarks, Bookmark } from '@/lib/api';
 
 export default function BookmarkList() {
   const [bookmarks, setBookmarks] = useState<Bookmark[]>([]);
@@ -26,7 +26,7 @@ export default function BookmarkList() {
   const filtered = bookmarks.filter(b => {
     const term = filter.toLowerCase();
     return (
-      b.title.toLowerCase().includes(term) ||
+      (b.title?.toLowerCase().includes(term) ?? false) ||
       b.url.toLowerCase().includes(term) ||
       b.tags.some(t => t.toLowerCase().includes(term))
     );

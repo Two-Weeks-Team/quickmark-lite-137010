@@ -1,7 +1,7 @@
 "use client";
 
-import CaptureForm from '@/src/components/CaptureForm';
-import BookmarkList from '@/src/components/BookmarkList';
+import CaptureForm from '@/components/CaptureForm';
+import BookmarkList from '@/components/BookmarkList';
 
 export default function HomePage() {
   return (

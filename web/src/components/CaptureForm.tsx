@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from 'react';
-import { createBookmark } from '@/src/lib/api';
-import AIChip from '@/src/components/AIChip';
+import { createBookmark } from '@/lib/api';
+import AIChip from '@/components/AIChip';
 
 export default function CaptureForm() {
   const [url, setUrl] = useState('');
